@@ -44,7 +44,7 @@ class processTotalWordsRead
 				$readLogObject->setSpeed(round($readLog->speed, 3));
 				if ($readLogObject->createReadLog() === TRUE) $count++;
 			}
-			$this->_logger->debug('ReadLogs Created: ' . $count);
+			if ($count > 0) $this->_logger->info('ReadLogs Created: ' . $count);
 		}
 	}
 }
