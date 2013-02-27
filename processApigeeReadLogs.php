@@ -4,10 +4,10 @@ session_start();
 
 require_once dirname(__FILE__) . '/includes/includes.php';
 
-$ptwr = new processTotalWordsRead();
-$ptwr->getTotalWordsRead();
+$ptwr = new processApigeeReadLogs();
+$ptwr->getApigeeReadLogs();
 
-class processTotalWordsRead
+class processApigeeReadLogs
 {
 	private $_logger;
 	private $_db;
@@ -21,7 +21,7 @@ class processTotalWordsRead
 		$this->_db = $mySqlConnect->db;
 	}
 
-	public function getTotalWordsRead()
+	public function getApigeeReadLogs()
 	{
 		$readLogObject = new ReadLog();
 		$readLogObject->getNewestReadLog();
@@ -44,7 +44,11 @@ class processTotalWordsRead
 				$readLogObject->setSpeed(round($readLog->speed, 3));
 				if ($readLogObject->createReadLog() === TRUE) $count++;
 			}
-			if ($count > 0) $this->_logger->info('ReadLogs Created: ' . $count);
+			if ($count > 0) {
+				$message = 'ReadLogs Created: ' . $count;
+				$this->_logger->info($message);
+				SendEmail::sendNewWordLogNotification($message);
+			}
 		}
 	}
 }

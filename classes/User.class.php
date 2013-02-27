@@ -1,12 +1,12 @@
 <?php
 
 /**
- * ReadLog.class.php
+ * User.class.php
  * Description:
  *
  */
 
-class ReadLog {
+class User {
 
 	private $_logger;
 	private $_db;
@@ -14,9 +14,9 @@ class ReadLog {
 	private $_uuid;
 	private $_created;
 	private $_modified;
-	private $_user;
-	private $_words;
-	private $_speed;
+	private $_name;
+	private $_email;
+	private $_username;
 
 	public function __construct()
 	{
@@ -27,18 +27,18 @@ class ReadLog {
 		$this->_db = $mySqlConnect->db;
 	}
 
-	public function createReadLog()
+	public function createUser()
 	{
 		$sql = "
 			INSERT INTO
-				readLogs
+				users
 			SET
 				uuid = '$this->_uuid',
 				created = '$this->_created',
 				modified = '$this->_modified',
-				user = '$this->_user',
-				words = '$this->_words',
-				speed = '$this->_speed'
+				name = '$this->_name',
+				email = '$this->_email',
+				username = '$this->_username'
 		";
 
 		mysql_query($sql);
@@ -51,13 +51,13 @@ class ReadLog {
 		}
 	}
 
-	public function getTotalWordsRead()
+	public function getTotalUsers()
 	{
 		$sql = "
 			SELECT
-				SUM(words)
+				COUNT(uuid)
 			FROM
-				readLogs
+				users
 		";
 
 		$result = mysql_query($sql);
@@ -70,13 +70,13 @@ class ReadLog {
 		}
 	}
 
-	public function getNewestReadLog()
+	public function getNewestUser()
 	{
 		$sql = "
 			SELECT
 				*
 			FROM
-				readLogs
+				users
 			ORDER BY
 				created DESC
 			LIMIT 1
@@ -88,9 +88,9 @@ class ReadLog {
 		$this->_uuid = $row['uuid'];
 		$this->_created = $row['created'];
 		$this->_modified = $row['modified'];
-		$this->_user = $row['user'];
-		$this->_words = $row['words'];
-		$this->_speed = $row['speed'];
+		$this->_name = $row['name'];
+		$this->_email = $row['email'];
+		$this->_username = $row['username'];
 	}
 
 	public function setUuid($uuid)
@@ -123,33 +123,33 @@ class ReadLog {
 		return $this->_modified;
 	}
 
-	public function setUser($user)
+	public function setName($name)
 	{
-		$this->_user = $user;
+		$this->_name = $name;
 	}
 
-	public function getUser()
+	public function getName()
 	{
-		return $this->_user;
+		return $this->_name;
 	}
 
-	public function setWords($words)
+	public function setEmail($email)
 	{
-		$this->_words = $words;
+		$this->_email = $email;
 	}
 
-	public function getWords()
+	public function getEmail()
 	{
-		return $this->_words;
+		return $this->_email;
 	}
 
-	public function setSpeed($speed)
+	public function setUsername($username)
 	{
-		$this->_speed = $speed;
+		$this->_username = $username;
 	}
 
-	public function getSpeed()
+	public function getUsername()
 	{
-		return $this->_speed;
+		return $this->_username;
 	}
 }
