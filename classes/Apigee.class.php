@@ -70,6 +70,44 @@ class Apigee {
 		return $users;
 	}
 
+	public function getSupportTickets($when = null, $created = null)
+	{
+		$baseUrl = 'https://api.usergrid.com/reallysimpleapps/readey/supporttickets';
+		$query = '';
+		if (isset($when) && isset($created)) {
+			if ($when === 'newer') {
+				$query .= '?ql=select%20*%20where%20created>' . $created;
+			} else if ($when === 'older') {
+				$query .= '?ql=select%20*%20where%20created<' . $created;
+			} else if ($when === 'equal') {
+				$query .= '?ql=select%20*%20where%20created=' . $created;
+			}
+		}
+		$url = $baseUrl . $query;
+
+		$supportTickets = json_decode(self::runCurl('GET', $url, TRUE));
+		return $supportTickets;
+	}
+
+	public function getFeedbacks($when = null, $created = null)
+	{
+		$baseUrl = 'https://api.usergrid.com/reallysimpleapps/readey/feedbacks';
+		$query = '';
+		if (isset($when) && isset($created)) {
+			if ($when === 'newer') {
+				$query .= '?ql=select%20*%20where%20created>' . $created;
+			} else if ($when === 'older') {
+				$query .= '?ql=select%20*%20where%20created<' . $created;
+			} else if ($when === 'equal') {
+				$query .= '?ql=select%20*%20where%20created=' . $created;
+			}
+		}
+		$url = $baseUrl . $query;
+
+		$feedbacks = json_decode(self::runCurl('GET', $url, TRUE));
+		return $feedbacks;
+	}
+
 	private function runCurl($requestMethod, $url, $auth = FALSE)
 	{
 		if ($auth === TRUE) {
