@@ -10,23 +10,23 @@ $ptwr->getApigeeUsers();
 class processApigeeUsers
 {
 	private $_logger;
-	private $_db;
+	private $_mySqlConnect;
 
 	public function __construct()
 	{
-		$this->_logger = Singleton::getInstance('Logger');
-		$this->_logger->debug('');
+		$container = new Container();
 
-		$mySqlConnect = Singleton::getInstance('MySQLConnect');
-		$this->_db = $mySqlConnect->db;
+		$this->_logger = $container->getLogger();
+
+		$this->_mySqlConnect = $container->getMySqlConnect();
 	}
 
 	public function getApigeeUsers()
 	{
-		$userObject = new User();
+		$userObject = new User($this->_logger, $this->_mySqlConnect->db);
 		$userObject->getNewestUser();
 
-		$apigee = new Apigee();
+		$apigee = new Apigee($this->_logger);
 		if ($apigee->getAuthToken() === TRUE) {
 			$users = $apigee->getUsers('newer', $userObject->getCreated());
 
@@ -48,7 +48,7 @@ class processApigeeUsers
 				if ($count > 0) {
 					$message = 'Users Created: ' . $count;
 					$this->_logger->info($message);
-					SendEmail::sendNewUserNotification($message);
+					SendNotifications::sendNewUserNotification($message);
 				}
 			}
 		}

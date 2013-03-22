@@ -10,23 +10,23 @@ $ptwr->getApigeeReadLogs();
 class processApigeeReadLogs
 {
 	private $_logger;
-	private $_db;
+	private $_mySqlConnect;
 
 	public function __construct()
 	{
-		$this->_logger = Singleton::getInstance('Logger');
-		$this->_logger->debug('');
+		$container = new Container();
 
-		$mySqlConnect = Singleton::getInstance('MySQLConnect');
-		$this->_db = $mySqlConnect->db;
+		$this->_logger = $container->getLogger();
+
+		$this->_mySqlConnect = $container->getMySqlConnect();
 	}
 
 	public function getApigeeReadLogs()
 	{
-		$readLogObject = new ReadLog();
+		$readLogObject = new ReadLog($this->_logger, $this->_mySqlConnect->db);
 		$readLogObject->getNewestReadLog();
 
-		$apigee = new Apigee();
+		$apigee = new Apigee($this->_logger);
 		$readLogs = $apigee->getReadLogs('newer', $readLogObject->getCreated());
 
 		if (isset($readLogs->action) && $readLogs->action === 'get') {
@@ -47,7 +47,7 @@ class processApigeeReadLogs
 			if ($count > 0) {
 				$message = 'ReadLogs Created: ' . $count;
 				$this->_logger->info($message);
-				SendEmail::sendNewWordLogNotification($message);
+				SendNotifications::sendNewWordLogNotification($message);
 			}
 		}
 	}

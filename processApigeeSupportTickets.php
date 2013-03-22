@@ -10,23 +10,23 @@ $ptwr->getApigeeSupportTickets();
 class processApigeeSupportTickets
 {
 	private $_logger;
-	private $_db;
+	private $_mySqlConnect;
 
 	public function __construct()
 	{
-		$this->_logger = Singleton::getInstance('Logger');
-		$this->_logger->debug('');
+		$container = new Container();
 
-		$mySqlConnect = Singleton::getInstance('MySQLConnect');
-		$this->_db = $mySqlConnect->db;
+		$this->_logger = $container->getLogger();
+
+		$this->_mySqlConnect = $container->getMySqlConnect();
 	}
 
 	public function getApigeeSupportTickets()
 	{
-		$supportTicketObject = new SupportTicket();
+		$supportTicketObject = new SupportTicket($this->_logger, $this->_mySqlConnect->db);
 		$supportTicketObject->getNewestSupportTicket();
 
-		$apigee = new Apigee();
+		$apigee = new Apigee($this->_logger);
 		if ($apigee->getAuthToken() === TRUE) {
 			$supportTickets = $apigee->getSupportTickets('newer', $supportTicketObject->getCreated());
 
@@ -49,7 +49,7 @@ class processApigeeSupportTickets
 				if ($count > 0) {
 					$message = 'Support Tickets Created: ' . $count;
 					$this->_logger->info($message);
-					SendEmail::sendNewSupportTicketNotification($message);
+					SendNotifications::sendNewSupportTicketNotification($message);
 				}
 			}
 		}
