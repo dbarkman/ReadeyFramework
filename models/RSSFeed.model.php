@@ -14,6 +14,7 @@ class RSSFeed
 	private $_uuid;
 	private $_feedUrl;
 	private $_title;
+	private $_category;
 	private $_permalink;
 	private $_created;
 	private $_modified;
@@ -48,6 +49,47 @@ class RSSFeed
 		return $feedArray;
 	}
 
+	public static function GetFeedsForAPI()
+	{
+		$feedArray = array();
+
+		$sql = "
+			SELECT
+				*
+			FROM
+				rssFeeds
+		";
+
+		$result = mysql_query($sql);
+
+		while ($row = mysql_fetch_assoc($result)) {
+			$feedArray[] = $row;
+		}
+
+		return $feedArray;
+	}
+
+	public static function GetFeedCategoriesForAPI()
+	{
+		$categoryArray = array();
+
+		$sql = "
+			SELECT
+				DISTINCT category
+			FROM
+				rssFeeds
+			ORDER BY category
+		";
+
+		$result = mysql_query($sql);
+
+		while ($row = mysql_fetch_assoc($result)) {
+			$categoryArray[] = array('name' => $row['category']);
+		}
+
+		return $categoryArray;
+	}
+
 	public function createFeed()
 	{
 		$sql = "
@@ -57,6 +99,7 @@ class RSSFeed
 				uuid = '$this->_uuid',
 				feedUrl = '$this->_feedUrl',
 				title = '$this->_title',
+				category = 'tbd',
 				permalink = '$this->_permalink',
 				created = '$this->_created',
 				modified = '$this->_modified'
@@ -100,6 +143,16 @@ class RSSFeed
 	public function getTitle()
 	{
 		return $this->_title;
+	}
+
+	public function setCategory($category)
+	{
+		$this->_category = $category;
+	}
+
+	public function getCategory()
+	{
+		return $this->_category;
 	}
 
 	public function setPermalink($permaLink)

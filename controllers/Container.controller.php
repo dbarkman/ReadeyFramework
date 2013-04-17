@@ -42,4 +42,15 @@ class Container
 
 		return self::$shared['mySqlConnect'] = $mySqlConnect;
 	}
+
+	public function getValidation()
+	{
+		if (isset(self::$shared['validation'])) {
+			return self::$shared['validation'];
+		}
+
+		$validation = new ReadeyFrameworkValidation($this->getLogger());
+
+		return self::$shared['validation'] = $validation;
+	}
 }

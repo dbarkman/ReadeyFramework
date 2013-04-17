@@ -61,15 +61,18 @@ class proccessRSSItems
 	{
 		$date = time();
 
+		$title = $item->get_title();
+		if (strlen($title) == 0) $title = '(title unknown)';
+
 		$rssItemObject = new RSSItem($this->_logger, $this->_mySqlConnect->db);
 		$rssItemObject->setUuid(UUID::getUUID());
 		$rssItemObject->setFeed($this->_currentFeed);
 		$rssItemObject->setMd5String($item->__toString());
-		$rssItemObject->setTitle($item->get_title());
+		$rssItemObject->setTitle(self::contentCleanup($title));
 		$rssItemObject->setDate($item->get_date('U'));
 		$rssItemObject->setPermalink($item->get_permalink());
-		$rssItemObject->setDescription($item->get_description());
-		$rssItemObject->setContent($item->get_content());
+		$rssItemObject->setDescription(self::contentCleanup($item->get_description()));
+		$rssItemObject->setContent(self::contentCleanup($item->get_content()));
 		$rssItemObject->setCreated($date);
 		$rssItemObject->setModified($date);
 		if ($rssItemObject->createItem() === FALSE) {
@@ -78,5 +81,67 @@ class proccessRSSItems
 		} else {
 			$this->_createdCount++;
 		}
+	}
+
+	private static function contentCleanup($content)
+	{
+		$content = strip_tags($content);
+		$search = array(
+			"&mdash;",
+			"&ndash;",
+			"&ldquo;",
+			"&rdquo;",
+			"&lsquo;",
+			"&rsquo;",
+			"&hellip;",
+			"&amp;",
+			"&bull;",
+			"&Prime;",
+			"&prime;",
+			"&Eacute;",
+			"&eacute;",
+			"&Iacute;",
+			"&iacute;",
+			"&Ouml;",
+			"&ouml;",
+			"&Uuml;",
+			"&uuml;",
+			"&nbsp;",
+			"\n"
+		);
+		$replace = array(
+			'-',
+			'-',
+			'“',
+			'”',
+			"‘",
+			"’",
+			'...',
+			'&',
+			'•',
+			'″',
+			"′",
+			'É',
+			'é',
+			'Í',
+			'í',
+			'Ö',
+			'ö',
+			'Ü',
+			'ü',
+			' ',
+			' '
+		);
+		$content = str_replace($search, $replace, $content);
+
+		$garbageSearch = array(
+			"/li&gt;"
+		);
+		$garbageReplace = array(
+			' '
+		);
+		$content = str_replace($garbageSearch, $garbageReplace, $content);
+
+		return $content;
 	}
 }

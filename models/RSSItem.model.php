@@ -29,6 +29,61 @@ class RSSItem
 		$this->_db = $db;
 	}
 
+	public static function GetItemsForFeedForAPI($feed)
+	{
+		$itemArray = array();
+
+		$sql = "
+			SELECT
+				*
+			FROM
+				rssItems
+			WHERE
+				feed = '$feed'
+			LIMIT 50
+		";
+
+		$result = mysql_query($sql);
+
+		while ($row = mysql_fetch_assoc($result)) {
+			$itemArray[] = $row;
+		}
+
+		return $itemArray;
+	}
+
+	public static function GetItemsForCategoryForAPI($category)
+	{
+		$itemArray = array();
+
+		$sql = "
+			SELECT
+				rf.title AS feedTitle,
+				ri.title,
+				ri.date,
+				ri.permalink,
+				ri.content
+			FROM
+				rssItems ri
+				JOIN rssFeeds rf on rf.uuid = ri.feed
+			WHERE
+				rf.category = '$category'
+			ORDER BY
+				date DESC
+			LIMIT 50
+		";
+
+		$result = mysql_query($sql);
+
+		while ($row = mysql_fetch_assoc($result)) {
+			$row['date'] = date('D, n/j, g:i a', $row['date']);
+			$row['wordCount'] = str_word_count($row['content']);
+			$itemArray[] = $row;
+		}
+
+		return $itemArray;
+	}
+
 	public static function getNewestItemDate($feed)
 	{
 		$sql = "
@@ -186,5 +241,117 @@ class RSSItem
 	public function getModified()
 	{
 		return $this->_modified;
+	}
+
+	private function fixMessyItems()
+	{
+		$errorArray = array();
+
+		$sql = "
+			SELECT
+				uuid,
+				title,
+				description,
+				content
+			FROM
+				rssItems
+			ORDER BY
+				date DESC
+		";
+
+		$result = mysql_query($sql);
+
+		while ($row = mysql_fetch_assoc($result)) {
+			$title = mysql_real_escape_string($this->contentCleanup($row['title']));
+			$description = mysql_real_escape_string($this->contentCleanup($row['description']));
+			$content = mysql_real_escape_string($this->contentCleanup($row['content']));
+			$uuid = $row['uuid'];
+
+			$updateSQL = "
+				UPDATE
+					rssItems
+				SET
+					title = '$title',
+					description = '$description',
+					content = '$content'
+				WHERE
+					uuid = '$uuid'
+			";
+//			$this->_logger->error('Query: ' . $updateSQL);
+
+			mysql_query($updateSQL);// or die ('Cannot insert item into the database because: ' . mysql_error());
+			$updateRowsAffected = mysql_affected_rows();
+
+			if ($updateRowsAffected == 1) {
+				$this->_logger->error('Item Update Succeeded');
+			} else {
+				$this->_logger->error('Cannot update item in the database because: ' . mysql_error() . ' - UUID: ' . $uuid);
+				$errorArray[] = $row;
+			}
+		}
+
+		return $errorArray;
+	}
+
+	private function contentCleanup($content)
+	{
+		$content = strip_tags($content);
+		$search = array(
+			"&mdash;",
+			"&ndash;",
+			"&ldquo;",
+			"&rdquo;",
+			"&lsquo;",
+			"&rsquo;",
+			"&hellip;",
+			"&amp;",
+			"&bull;",
+			"&Prime;",
+			"&prime;",
+			"&Eacute;",
+			"&eacute;",
+			"&Iacute;",
+			"&iacute;",
+			"&Ouml;",
+			"&ouml;",
+			"&Uuml;",
+			"&uuml;",
+			"&nbsp;",
+			"\n"
+		);
+		$replace = array(
+			'-',
+			'-',
+			'“',
+			'”',
+			"‘",
+			"’",
+			'...',
+			'&',
+			'•',
+			'″',
+			"′",
+			'É',
+			'é',
+			'Í',
+			'í',
+			'Ö',
+			'ö',
+			'Ü',
+			'ü',
+			' ',
+			' '
+		);
+		$content = str_replace($search, $replace, $content);
+
+		$garbageSearch = array(
+			"/li&gt;"
+		);
+		$garbageReplace = array(
+			' '
+		);
+		$content = str_replace($garbageSearch, $garbageReplace, $content);
+
+		return $content;
 	}
 }
