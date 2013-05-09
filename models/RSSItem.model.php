@@ -277,13 +277,12 @@ class RSSItem
 				WHERE
 					uuid = '$uuid'
 			";
-//			$this->_logger->error('Query: ' . $updateSQL);
 
 			mysql_query($updateSQL);// or die ('Cannot insert item into the database because: ' . mysql_error());
 			$updateRowsAffected = mysql_affected_rows();
 
 			if ($updateRowsAffected == 1) {
-				$this->_logger->error('Item Update Succeeded');
+				$this->_logger->info('Item Update Succeeded');
 			} else {
 				$this->_logger->error('Cannot update item in the database because: ' . mysql_error() . ' - UUID: ' . $uuid);
 				$errorArray[] = $row;
