@@ -2,37 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69bfc728-9974-4183-8121-1ef493fe9c54" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/RSSCategory.model.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addCategory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getDateAndUuid.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/RSSFeed.model.php" afterPath="$PROJECT_DIR$/models/RSSFeed.model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/RSSItem.model.php" afterPath="$PROJECT_DIR$/models/RSSItem.model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/ReadLog.model.php" afterPath="$PROJECT_DIR$/models/ReadLog.model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ReadeyFrameworkValidation.controller.php" afterPath="$PROJECT_DIR$/controllers/ReadeyFrameworkValidation.controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addRSS.php" afterPath="$PROJECT_DIR$/addRSS.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/readey.properties" afterPath="$PROJECT_DIR$/config/readey.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ReadeyFramework.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368112237640" ignored="false" />
-    <file path="/RSSFeed.model.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365031156959" ignored="false" />
+    <file path="/Dummy.txt" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369251616076" ignored="false" />
+    <file path="/RSSFeed.model.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369373506349" ignored="false" />
     <file path="$PROJECT_DIR$/../Readey/api/index.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365720420569" ignored="false" />
-    <file path="/index.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365722246437" ignored="false" />
+    <file path="/index.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369416684451" ignored="false" />
     <file path="$PROJECT_DIR$/../Readey/api/.htaccess" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365111929221" ignored="false" />
-    <file path="/.htaccess" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365108510810" ignored="false" />
-    <file path="/RSSItem.model.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368111920588" ignored="false" />
-    <file path="/a.dummy" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368111773825" ignored="false" />
+    <file path="/.htaccess" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369196283272" ignored="false" />
+    <file path="/RSSItem.model.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369370030118" ignored="false" />
+    <file path="/a.dummy" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369357754580" ignored="false" />
     <file path="/processRSSItems.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365630787827" ignored="false" />
     <file path="$PROJECT_DIR$/../dbFramework/controllers/MobileAPIValidation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365112801068" ignored="false" />
     <file path="$PROJECT_DIR$/../dbFramework/controllers/APIValidation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365113293701" ignored="false" />
-    <file path="$PROJECT_DIR$/../dbFramework/controllers/Validation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365719612324" ignored="false" />
+    <file path="$PROJECT_DIR$/../dbFramework/controllers/Validation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369199446822" ignored="false" />
     <file path="/APIValidation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365113882180" ignored="false" />
-    <file path="$PROJECT_DIR$/../dbFramework/controllers/FrameworkValidation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365720348689" ignored="false" />
+    <file path="$PROJECT_DIR$/../dbFramework/controllers/FrameworkValidation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369234603831" ignored="false" />
     <file path="$PROJECT_DIR$/../dbFramework/controllers/Dropdowns.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365722698774" ignored="false" />
-    <file path="/Validation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365719602573" ignored="false" />
+    <file path="/Validation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369199416543" ignored="false" />
     <file path="/ReadeyFrameworkValidation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365115651285" ignored="false" />
     <file path="/Container.controller.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368041634377" ignored="false" />
-    <file path="/ReadeyFrameworkValidation.controller.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365720383637" ignored="false" />
-    <file path="/readey.properties" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368112149887" ignored="false" />
+    <file path="/ReadeyFrameworkValidation.controller.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369375467809" ignored="false" />
+    <file path="/readey.properties" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369459461930" ignored="false" />
     <file path="$PROJECT_DIR$/../dbFramework/controllers/LogRequest.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365717358584" ignored="false" />
     <file path="/LogRequest.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365717358055" ignored="false" />
     <file path="/Dropdowns.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1366210586866" ignored="false" />
-    <file path="/FrameworkValidation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365720217642" ignored="false" />
-    <file path="$PROJECT_DIR$/../ReadeyAPI/index.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365722876642" ignored="false" />
+    <file path="/FrameworkValidation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369234599725" ignored="false" />
+    <file path="$PROJECT_DIR$/../ReadeyAPI/index.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369416766046" ignored="false" />
     <file path="$PROJECT_DIR$/../../../StormSource/PHP/Framework/framework/Client.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1366209803898" ignored="false" />
     <file path="$PROJECT_DIR$/../../../StormSource/PHP/Framework/html/api/Mobile/mobileAPI.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1366389036041" ignored="false" />
     <file path="$PROJECT_DIR$/../../../StormSource/PHP/Framework/framework/Dropdowns.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1366210751262" ignored="false" />
@@ -41,13 +48,13 @@
     <file path="$PROJECT_DIR$/../../../StormSource/PHP/Framework/html/mobileAPI.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1366315928296" ignored="false" />
     <file path="$PROJECT_DIR$/../../../StormSource/PHP/Framework/framework/Totango.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1366315982884" ignored="false" />
     <file path="/Totango.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1366315982357" ignored="false" />
-    <file path="/earthquakes.properties" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368041076190" ignored="false" />
-    <file path="$PROJECT_DIR$/../Earthquakes/config/earthquakes.properties" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368041076190" ignored="false" />
+    <file path="/earthquakes.properties" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369251622713" ignored="false" />
+    <file path="$PROJECT_DIR$/../Earthquakes/config/earthquakes.properties" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369251622713" ignored="false" />
     <file path="$PROJECT_DIR$/../Earthquakes/includes/includes.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368038156123" ignored="false" />
     <file path="$PROJECT_DIR$/../Earthquakes/config/credentials.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368079745813" ignored="false" />
     <file path="/credentials.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368078582995" ignored="false" />
-    <file path="$PROJECT_DIR$/../Earthquakes/controllers/USGS.controller.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368041429267" ignored="false" />
-    <file path="/USGS.controller.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368040473482" ignored="false" />
+    <file path="$PROJECT_DIR$/../Earthquakes/controllers/USGS.controller.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369252367420" ignored="false" />
+    <file path="/USGS.controller.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369252077503" ignored="false" />
     <file path="/processEarthquakes.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368082930572" ignored="false" />
     <file path="$PROJECT_DIR$/../Earthquakes/processEarthquakes.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368084779398" ignored="false" />
     <file path="$PROJECT_DIR$/../Earthquakes/controllers/EarthquakesProperties.controller.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368041616074" ignored="false" />
@@ -58,7 +65,32 @@
     <file path="$PROJECT_DIR$/../Earthquakes/config/config.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368083420456" ignored="false" />
     <file path="$PROJECT_DIR$/../Earthquakes/Sag/httpAdapters/SagNativeHTTPAdapter.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368073987198" ignored="false" />
     <file path="/SagNativeHTTPAdapter.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368073983056" ignored="false" />
-    <file path="$PROJECT_DIR$/../Earthquakes/.idea/workspace.xml" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368112152030" ignored="false" />
+    <file path="$PROJECT_DIR$/../Earthquakes/.idea/workspace.xml" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368229781537" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../StormSource/PHP/API-ThePrecious/Apis/ExampleApi/Configurations/MyConfig.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368221264944" ignored="false" />
+    <file path="/WhichConfig.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368224532963" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../StormSource/PHP/API-ThePrecious/Apis/ExampleApi/Configurations/WhichConfig.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368220376776" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../StormSource/PHP/API-ThePrecious/Apis/ExampleApi/Website/Rest/index.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368223146671" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../StormSource/PHP/API-ThePrecious/Apis/ExampleApi/Load.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368223159829" ignored="false" />
+    <file path="/Load.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368222903696" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../StormSource/PHP/API-ThePrecious/Load.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368220610087" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../StormSource/PHP/API-ThePrecious/Classes/Framework/Core/PhpSessionManagementObj.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368220736827" ignored="false" />
+    <file path="/PhpSessionManagementObj.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368227515317" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../StormSource/PHP/API-ThePrecious/Classes/Api/Core/BuilderConfigObj.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368223111907" ignored="false" />
+    <file path="/BuilderConfigObj.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368223036582" ignored="false" />
+    <file path="/MyConfig.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368221247939" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../StormSource/PHP/API-Precious/Apis/ExampleApi/Configurations/WhichConfig.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368224532963" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../StormSource/PHP/API-Precious/build.xml" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368227144143" ignored="false" />
+    <file path="/build.xml" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368227140519" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../StormSource/PHP/API-Precious/Testing/Framework/RoomObj.test.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368229768808" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../StormSource/PHP/API-Precious/Classes/Framework/Core/PhpSessionManagementObj.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368227544213" ignored="false" />
+    <file path="/RoomObj.test.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368229768808" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../StormSource/PHP/API-Precious/Classes/Framework/Core/MemcacheFactoryObj.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368229684769" ignored="false" />
+    <file path="$PROJECT_DIR$/../ReadeyAPI/.htaccess" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369416253533" ignored="false" />
+    <file path="/ReadLog.model.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369381731092" ignored="false" />
+    <file path="/addRSS.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369369289644" ignored="false" />
+    <file path="/RSSCategory.model.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369383440636" ignored="false" />
+    <file path="/addCategory.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369368381517" ignored="false" />
+    <file path="/getDateAndUuid.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369373179042" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +113,55 @@
       <file leaf-file-name="readey.properties" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/readey.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="22" selection-start="58" selection-end="58" vertical-scroll-proportion="0.020775624">
+            <state line="1" column="21" selection-start="57" selection-end="57" vertical-scroll-proportion="0.020833334">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadLog.model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/ReadLog.model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="78" selection-start="478" selection-end="478" vertical-scroll-proportion="-2.1666667">
+              <folding>
+                <element signature="e#7#54#0" expanded="true" />
+                <marker date="1369419971000" expanded="true" signature="493:708" placeholder="SELECT DISTI..rssItems..." />
+                <marker date="1369419971000" expanded="true" signature="893:1144" placeholder="INSERT INTO ..." />
+                <marker date="1369419971000" expanded="true" signature="1349:1391" placeholder="SELECT SUM(w..readLogs..." />
+                <marker date="1369419971000" expanded="true" signature="1609:1682" placeholder="SELECT * FRO..readLogs..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RSSCategory.model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/RSSCategory.model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="31" selection-start="872" selection-end="872" vertical-scroll-proportion="-11.25">
+              <folding>
+                <element signature="e#7#58#0" expanded="true" />
+                <marker date="1369410451000" expanded="true" signature="406:444" placeholder="SELECT * FRO..rssCategories..." />
+                <marker date="1369410451000" expanded="true" signature="890:1046" placeholder="SELECT uuid,..rssCategories..." />
+                <marker date="1369410451000" expanded="true" signature="890:965" placeholder="SELECT uuid,..rssCategories..." />
+                <marker date="1369410451000" expanded="true" signature="890:965" placeholder="SELECT uuid,..rssCategories..." />
+                <marker date="1369410451000" expanded="true" signature="1313:1382" placeholder="SELECT uuid ..rssCategories..." />
+                <marker date="1369410451000" expanded="true" signature="1591:1775" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RSSItem.model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/RSSItem.model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="100" column="0" selection-start="1954" selection-end="2026" vertical-scroll-proportion="-62.5">
+              <folding>
+                <marker date="1369377941000" expanded="true" signature="500:573" placeholder="SELECT * FRO..rssItems..." />
+                <marker date="1369377941000" expanded="true" signature="2146:2247" placeholder="SELECT date ..rssItems..." />
+                <marker date="1369377941000" expanded="true" signature="2783:3139" placeholder="INSERT INTO ..." />
+                <marker date="1369377941000" expanded="true" signature="4982:5085" placeholder="SELECT uuid,..rssItems..." />
+                <marker date="1369377941000" expanded="true" signature="5462:5604" placeholder="UPDATE rssIt..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,21 +184,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/addRSS.php" />
-        <option value="$PROJECT_DIR$/processApigeeFeedbacks.php" />
-        <option value="$PROJECT_DIR$/processApigeeReadLogs.php" />
-        <option value="$PROJECT_DIR$/processApigeeSupportTickets.php" />
-        <option value="$PROJECT_DIR$/processApigeeUsers.php" />
-        <option value="$PROJECT_DIR$/controllers/Apigee.controller.php" />
         <option value="$PROJECT_DIR$/models/Feedback.model.php" />
         <option value="$PROJECT_DIR$/models/SupportTicket.model.php" />
         <option value="$PROJECT_DIR$/models/User.model.php" />
-        <option value="$PROJECT_DIR$/models/RSSFeed.model.php" />
         <option value="$PROJECT_DIR$/controllers/ReadeyFrameworkValidation.class.php" />
         <option value="$PROJECT_DIR$/controllers/Container.controller.php" />
         <option value="$PROJECT_DIR$/processRSSItems.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/addCategory.php" />
+        <option value="$PROJECT_DIR$/addRSS.php" />
+        <option value="$PROJECT_DIR$/getDateAndUuid.php" />
+        <option value="$PROJECT_DIR$/models/RSSFeed.model.php" />
         <option value="$PROJECT_DIR$/controllers/ReadeyFrameworkValidation.controller.php" />
         <option value="$PROJECT_DIR$/models/RSSItem.model.php" />
+        <option value="$PROJECT_DIR$/models/RSSCategory.model.php" />
+        <option value="$PROJECT_DIR$/models/ReadLog.model.php" />
         <option value="$PROJECT_DIR$/config/readey.properties" />
       </list>
     </option>
@@ -129,6 +208,25 @@
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="845" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SQL</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -156,6 +254,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -246,16 +345,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="options.lastSelected" value="SQL Dialects" />
+    <property name="options.lastSelected" value="Errors" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ReadeyAPI" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig" serverName="web1-Readey" serverId="3583b9eb-70c5-4f30-88bd-27c340b1b0f6" autoUpload="true">
     <servers>
@@ -352,6 +450,9 @@
             <mapping local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
+      </server>
+      <server id="65433106-6947-4f21-93cd-30a95959ac55">
+        <serverdata />
       </server>
       <server id="925607bb-1844-4641-b98a-2e3e0335e6d0">
         <serverdata>
@@ -462,9 +563,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$/controllers" />
       <recent name="$PROJECT_DIR$/classes" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/logs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -537,26 +639,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="845" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="845" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15064563" sideWeight="0.672" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32712328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="122" width="1240" height="645" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32486632" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15710187" sideWeight="0.6751337" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32533333" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -623,105 +725,140 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/addRSS.php">
+    <entry file="file://$PROJECT_DIR$/processApigeeReadLogs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="477" selection-end="477" vertical-scroll-proportion="-11.478261" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Feedback.model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="68" selection-start="2135" selection-end="2135" vertical-scroll-proportion="-13.26087" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/SupportTicket.model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="60" selection-start="2231" selection-end="2231" vertical-scroll-proportion="-26.652174" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/User.model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="54" selection-start="1877" selection-end="1877" vertical-scroll-proportion="-14.608696" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ReadLog.model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="5" selection-start="1770" selection-end="1770" vertical-scroll-proportion="-57.217392" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/RSSFeed.model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="64" selection-start="1241" selection-end="1241" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/Container.controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="70" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.7636103" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ReadeyFrameworkValidation.controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="49" selection-start="5215" selection-end="5231" vertical-scroll-proportion="0.37679082" />
+        <state line="45" column="0" selection-start="899" selection-end="1257" vertical-scroll-proportion="-21.25" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/credentials.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="15" selection-start="210" selection-end="224" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/Apigee.controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="5" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processApigeeReadLogs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="260" selection-end="394" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/includes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="37" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
+        <state line="15" column="15" selection-start="210" selection-end="224" vertical-scroll-proportion="-6.875">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/processApigeeFeedbacks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="20" selection-start="1492" selection-end="1492" vertical-scroll-proportion="0.0">
+        <state line="46" column="0" selection-start="966" selection-end="1348" vertical-scroll-proportion="-20.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Feedback.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="34" selection-start="388" selection-end="402" vertical-scroll-proportion="0.5572065">
+          <folding>
+            <marker date="1363929983000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1363929983000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..feedbacks..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="29" selection-start="230" selection-end="230" vertical-scroll-proportion="0.1724138">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/Container.controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="447" selection-end="506" vertical-scroll-proportion="0.32471263">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addRSS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="67" selection-start="1142" selection-end="1142" vertical-scroll-proportion="-20.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="39" selection-start="867" selection-end="867" vertical-scroll-proportion="-21.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getDateAndUuid.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="20" selection-start="128" selection-end="128" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/RSSFeed.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="26" selection-start="500" selection-end="500" vertical-scroll-proportion="-16.875">
+          <folding>
+            <marker date="1369373511000" expanded="true" signature="-1:-1" placeholder="SELECT uuid,..rssFeeds..." />
+            <marker date="1369373511000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rssFeeds..." />
+            <marker date="1369373511000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..rssFeeds..." />
+            <marker date="1369373511000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/processRSSItems.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="12" selection-start="2363" selection-end="2363" vertical-scroll-proportion="0.0">
+        <state line="33" column="35" selection-start="755" selection-end="755" vertical-scroll-proportion="2.875">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ReadeyFrameworkValidation.controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="57" selection-start="5477" selection-end="5477" vertical-scroll-proportion="-11.208333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/RSSCategory.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="31" selection-start="872" selection-end="872" vertical-scroll-proportion="-11.25">
+          <folding>
+            <element signature="e#7#58#0" expanded="true" />
+            <marker date="1369410451000" expanded="true" signature="406:444" placeholder="SELECT * FRO..rssCategories..." />
+            <marker date="1369410451000" expanded="true" signature="890:1046" placeholder="SELECT uuid,..rssCategories..." />
+            <marker date="1369410451000" expanded="true" signature="890:965" placeholder="SELECT uuid,..rssCategories..." />
+            <marker date="1369410451000" expanded="true" signature="890:965" placeholder="SELECT uuid,..rssCategories..." />
+            <marker date="1369410451000" expanded="true" signature="1313:1382" placeholder="SELECT uuid ..rssCategories..." />
+            <marker date="1369410451000" expanded="true" signature="1591:1775" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/RSSItem.model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="282" column="0" selection-start="4986" selection-end="4986" vertical-scroll-proportion="0.0">
+        <state line="100" column="0" selection-start="1954" selection-end="2026" vertical-scroll-proportion="-62.5">
           <folding>
-            <marker date="1368111933000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rssItems..." />
-            <marker date="1368111933000" expanded="true" signature="-1:-1" placeholder="SELECT rf.ti..rssItems..." />
-            <marker date="1368111933000" expanded="true" signature="-1:-1" placeholder="SELECT date ..rssItems..." />
-            <marker date="1368111933000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1368111933000" expanded="true" signature="-1:-1" placeholder="SELECT uuid,..rssItems..." />
-            <marker date="1368111933000" expanded="true" signature="-1:-1" placeholder="UPDATE rssIt..." />
+            <marker date="1369377941000" expanded="true" signature="500:573" placeholder="SELECT * FRO..rssItems..." />
+            <marker date="1369377941000" expanded="true" signature="2146:2247" placeholder="SELECT date ..rssItems..." />
+            <marker date="1369377941000" expanded="true" signature="2783:3139" placeholder="INSERT INTO ..." />
+            <marker date="1369377941000" expanded="true" signature="4982:5085" placeholder="SELECT uuid,..rssItems..." />
+            <marker date="1369377941000" expanded="true" signature="5462:5604" placeholder="UPDATE rssIt..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ReadLog.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="78" selection-start="478" selection-end="478" vertical-scroll-proportion="-2.1666667">
+          <folding>
+            <element signature="e#7#54#0" expanded="true" />
+            <marker date="1369419971000" expanded="true" signature="493:708" placeholder="SELECT DISTI..rssItems..." />
+            <marker date="1369419971000" expanded="true" signature="893:1144" placeholder="INSERT INTO ..." />
+            <marker date="1369419971000" expanded="true" signature="1349:1391" placeholder="SELECT SUM(w..readLogs..." />
+            <marker date="1369419971000" expanded="true" signature="1609:1682" placeholder="SELECT * FRO..readLogs..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/readey.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="22" selection-start="58" selection-end="58" vertical-scroll-proportion="0.020775624">
+        <state line="1" column="21" selection-start="57" selection-end="57" vertical-scroll-proportion="0.020833334">
           <folding />
         </state>
       </provider>

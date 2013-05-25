@@ -36,6 +36,8 @@ class RSSFeed
 				feedUrl
 			FROM
 				rssFeeds
+			WHERE
+				active = 1
 		";
 
 		$result = mysql_query($sql);
@@ -99,7 +101,7 @@ class RSSFeed
 				uuid = '$this->_uuid',
 				feedUrl = '$this->_feedUrl',
 				title = '$this->_title',
-				category = 'tbd',
+				category = '$this->_category',
 				permalink = '$this->_permalink',
 				created = '$this->_created',
 				modified = '$this->_modified'

@@ -23,16 +23,48 @@ class ReadeyFrameworkValidation
 		$this->_validate = new FrameworkValidation();
 	}
 
-	public function validateAPIKey()
+	public function validateAPICommon()
 	{
 		$_REQUEST['key'] = $this->_validate->sanitizeAPIKey($_REQUEST['key']);
+		if (isset($_REQUEST['uuid'])) $_REQUEST['uuid'] = $this->_validate->sanitizeUUID($_REQUEST['uuid']);
+		if (isset($_REQUEST['appVersion'])) $_REQUEST['appVersion'] = $this->_validate->sanitizeFloat($_REQUEST['appVersion']);
+		if (isset($_REQUEST['device'])) $_REQUEST['device'] = $this->_validate->sanitizeTextWithSpace($_REQUEST['device']);
+		if (isset($_REQUEST['machine'])) $_REQUEST['machine'] = $this->_validate->sanitizeMachineName($_REQUEST['machine']);
+		if (isset($_REQUEST['osVersion'])) $_REQUEST['osVersion'] = $this->_validate->sanitizeFloat($_REQUEST['osVersion']);
 		$this->validateKey(TRUE);
+		$this->validateUUID(FALSE);
+		$this->validateAppVersion(FALSE);
+		$this->validateDevice(FALSE);
+		$this->validateMachine(FALSE);
+		$this->validateOSVersion(FALSE);
 	}
 
-	public function validateItemsCategory()
+	public function validateGetItems()
 	{
-		$_REQUEST['category'] = $this->_validate->sanitizeCategory($_REQUEST['category']);
+		$_REQUEST['category'] = $this->_validate->sanitizeUUID($_REQUEST['category']);
+		if (isset($_REQUEST['page'])) $_REQUEST['page'] = $this->_validate->sanitizeInteger($_REQUEST['page']);
 		$this->validateCategory(TRUE);
+		$this->validatePage(FALSE);
+	}
+
+	public function validateReadLog()
+	{
+		$_REQUEST['words'] = $this->_validate->sanitizeInteger($_REQUEST['words']);
+		$_REQUEST['speed'] = $this->_validate->sanitizeFloat($_REQUEST['speed']);
+		$_REQUEST['rssItemUuid'] = $this->_validate->sanitizeUUID($_REQUEST['rssItemUuid']);
+		$this->validateWords(TRUE);
+		$this->validateSpeed(TRUE);
+		$this->validateRssItemUuid(TRUE);
+	}
+
+	public function validateFeedback()
+	{
+		if (isset($_REQUEST['feedbackType'])) $_REQUEST['feedbackType'] = $this->_validate->sanitizeTextWithSpace($_REQUEST['feedbackType']);
+		if (isset($_REQUEST['description'])) $_REQUEST['description'] = $this->_validate->sanitizeSentence($_REQUEST['description']);
+		if (isset($_REQUEST['email'])) $_REQUEST['email'] = $this->_validate->sanitizeEmail($_REQUEST['email']);
+		$this->validateFeedbackType(FALSE);
+		$this->validateDescription(FALSE);
+		$this->validateEmail(FALSE);
 	}
 
 	private function validateKey($required) {
@@ -45,13 +77,133 @@ class ReadeyFrameworkValidation
 		}
 	}
 
+	private function validateUUID($required) {
+		if (isset($_REQUEST['uuid']) && !empty($_REQUEST['uuid'])) {
+			$this->_logger->debug('Checking uuid: ' . $_REQUEST['uuid']);
+			$returnError = $this->_validate->validateUUID($_REQUEST['uuid']);
+			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'uuid', $returnError);
+		} else if ($required === TRUE) {
+			$this->reportVariableErrors('missing', 'uuid', '');
+		}
+	}
+
+	private function validateAppVersion($required) {
+		if (isset($_REQUEST['appVersion']) && !empty($_REQUEST['appVersion'])) {
+			$this->_logger->debug('Checking appVersion: ' . $_REQUEST['appVersion']);
+			$returnError = $this->_validate->validateVersionNumber($_REQUEST['appVersion']);
+			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'appVersion', $returnError);
+		} else if ($required === TRUE) {
+			$this->reportVariableErrors('missing', 'appVersion', '');
+		}
+	}
+
+	private function validateDevice($required) {
+		if (isset($_REQUEST['device']) && !empty($_REQUEST['device'])) {
+			$this->_logger->debug('Checking device: ' . $_REQUEST['device']);
+			$returnError = $this->_validate->validateTextWithSpace($_REQUEST['device']);
+			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'device', $returnError);
+		} else if ($required === TRUE) {
+			$this->reportVariableErrors('missing', 'device', '');
+		}
+	}
+
+	private function validateMachine($required) {
+		if (isset($_REQUEST['machine']) && !empty($_REQUEST['machine'])) {
+			$this->_logger->debug('Checking machine: ' . $_REQUEST['machine']);
+			$returnError = $this->_validate->validateMachineName($_REQUEST['machine']);
+			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'machine', $returnError);
+		} else if ($required === TRUE) {
+			$this->reportVariableErrors('missing', 'machine', '');
+		}
+	}
+
+	private function validateOSVersion($required) {
+		if (isset($_REQUEST['osVersion']) && !empty($_REQUEST['osVersion'])) {
+			$this->_logger->debug('Checking osVersion: ' . $_REQUEST['osVersion']);
+			$returnError = $this->_validate->validateVersionNumber($_REQUEST['osVersion']);
+			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'osVersion', $returnError);
+		} else if ($required === TRUE) {
+			$this->reportVariableErrors('missing', 'osVersion', '');
+		}
+	}
+
 	private function validateCategory($required) {
 		if (isset($_REQUEST['category']) && !empty($_REQUEST['category'])) {
 			$this->_logger->debug('Checking category: ' . $_REQUEST['category']);
-			$returnError = $this->_validate->validateCategory($_REQUEST['category']);
+			$returnError = $this->_validate->validateUUID($_REQUEST['category']);
 			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'category', $returnError);
 		} else if ($required === TRUE) {
 			$this->reportVariableErrors('missing', 'category', '');
+		}
+	}
+
+	private function validatePage($required) {
+		if (isset($_REQUEST['page']) && !empty($_REQUEST['page'])) {
+			$this->_logger->debug('Checking page: ' . $_REQUEST['page']);
+			$returnError = $this->_validate->validateInteger($_REQUEST['page']);
+			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'page', $returnError);
+		} else if ($required === TRUE) {
+			$this->reportVariableErrors('missing', 'page', '');
+		}
+	}
+
+	private function validateWords($required) {
+		if ((isset($_REQUEST['words']) && !empty($_REQUEST['words'])) || $_REQUEST['words'] == 0) {
+			$this->_logger->debug('Checking words: ' . $_REQUEST['words']);
+			$returnError = $this->_validate->validateInteger($_REQUEST['words']);
+			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'words', $returnError);
+		} else if ($required === TRUE) {
+			$this->reportVariableErrors('missing', 'words', '');
+		}
+	}
+
+	private function validateSpeed($required) {
+		if ((isset($_REQUEST['speed']) && !empty($_REQUEST['speed'])) || $_REQUEST['speed'] == 0) {
+			$this->_logger->debug('Checking speed: ' . $_REQUEST['speed']);
+			$returnError = $this->_validate->validateFloat($_REQUEST['speed']);
+			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'speed', $returnError);
+		} else if ($required === TRUE) {
+			$this->reportVariableErrors('missing', 'speed', '');
+		}
+	}
+
+	private function validateRssItemUuid($required) {
+		if (isset($_REQUEST['rssItemUuid']) && !empty($_REQUEST['rssItemUuid'])) {
+			$this->_logger->debug('Checking rssItemUuid: ' . $_REQUEST['rssItemUuid']);
+			$returnError = $this->_validate->validateUUID($_REQUEST['rssItemUuid']);
+			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'rssItemUuid', $returnError);
+		} else if ($required === TRUE) {
+			$this->reportVariableErrors('missing', 'rssItemUuid', '');
+		}
+	}
+
+	private function validateFeedbackType($required) {
+		if (isset($_REQUEST['feedbackType']) && !empty($_REQUEST['feedbackType'])) {
+			$this->_logger->debug('Checking feedback type: ' . $_REQUEST['feedbackType']);
+			$returnError = $this->_validate->validateTextWithSpace($_REQUEST['feedbackType']);
+			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'feedbackType', $returnError);
+		} else if ($required === TRUE) {
+			$this->reportVariableErrors('missing', 'feedbackType', '');
+		}
+	}
+
+	private function validateDescription($required) {
+		if (isset($_REQUEST['description']) && !empty($_REQUEST['description'])) {
+			$this->_logger->debug('Checking description: ' . $_REQUEST['description']);
+			$returnError = $this->_validate->validateSentence($_REQUEST['description']);
+			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'description', $returnError);
+		} else if ($required === TRUE) {
+			$this->reportVariableErrors('missing', 'description', '');
+		}
+	}
+
+	private function validateEmail($required) {
+		if (isset($_REQUEST['email']) && !empty($_REQUEST['email'])) {
+			$this->_logger->debug('Checking email: ' . $_REQUEST['email']);
+			$returnError = $this->_validate->validateEmail($_REQUEST['email']);
+			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'email', $returnError);
+		} else if ($required === TRUE) {
+			$this->reportVariableErrors('missing', 'email', '');
 		}
 	}
 
@@ -82,16 +234,6 @@ class ReadeyFrameworkValidation
 			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'date', $returnError);
 		} else if ($required === TRUE) {
 			$this->reportVariableErrors('missing', 'date', '');
-		}
-	}
-
-	private function validateEmail($required) {
-		if (isset($_REQUEST['email' ]) && !empty($_REQUEST['email'])) {
-			$this->_logger->debug('Checking email: ' . $_REQUEST['email']);
-			$returnError = $this->_validate->validateEmail($_REQUEST['email']);
-			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'email', $returnError);
-		} else if ($required === TRUE) {
-			$this->reportVariableErrors('missing', 'email', '');
 		}
 	}
 

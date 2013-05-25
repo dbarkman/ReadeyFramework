@@ -10,10 +10,16 @@ if (!isset($argv[1])) {
 	exit();
 }
 
+if (!isset($argv[2])) {
+	echo 'please include a category' . PHP_EOL;
+	exit();
+}
+
 $feedUrl = $argv[1];
+$category = $argv[2];
 
 $addRSS = new addRSSFeed();
-$addRSS->addRss($feedUrl);
+$addRSS->addRss($feedUrl, $category);
 
 class addRSSFeed
 {
@@ -29,7 +35,7 @@ class addRSSFeed
 		$this->_mySqlConnect = $container->getMySqlConnect();
 	}
 
-	public function addRss($feedUrl)
+	public function addRss($feedUrl, $category)
 	{
 		$feed = new SimplePie();
 		$feed->set_feed_url($feedUrl);
@@ -43,6 +49,7 @@ class addRSSFeed
 			$rssFeedObject->setUuid(UUID::getUUID());
 			$rssFeedObject->setFeedUrl($feedUrl);
 			$rssFeedObject->setTitle($feed->get_title());
+			$rssFeedObject->setCategory(RSSCategory::GetCategoryUUIDForName($category));
 			$rssFeedObject->setPermalink($feed->get_permalink());
 			$rssFeedObject->setCreated($date);
 			$rssFeedObject->setModified($date);

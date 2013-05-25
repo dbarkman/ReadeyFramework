@@ -40,7 +40,7 @@ class RSSItem
 				rssItems
 			WHERE
 				feed = '$feed'
-			LIMIT 50
+			LIMIT 10
 		";
 
 		$result = mysql_query($sql);
@@ -52,32 +52,52 @@ class RSSItem
 		return $itemArray;
 	}
 
-	public static function GetItemsForCategoryForAPI($category)
+	public static function GetItemsForCategoryForAPI($category, $page, $itemsPerPage, $user)
 	{
+//		$properties = new ReadeyProperties();
+//		$logFile = $properties->getLogFile();
+//		$logLevel = $properties->getLogLevel();
+//		$logger = new Logger($logLevel, $logFile);
+
+		$limit = intval($itemsPerPage);
+		$index = ($page > 0) ? (($page - 1) * $itemsPerPage) : 0;
+
 		$itemArray = array();
 
 		$sql = "
 			SELECT
+				DISTINCT
+				SQL_CALC_FOUND_ROWS
+				ri.uuid,
 				rf.title AS feedTitle,
 				ri.title,
 				ri.date,
+				rl.rssItemUuid AS alreadyRead,
 				ri.permalink,
 				ri.content
 			FROM
 				rssItems ri
-				JOIN rssFeeds rf on rf.uuid = ri.feed
+				JOIN rssFeeds rf ON rf.uuid = ri.feed
+				JOIN rssCategories rc ON rc.uuid = rf.category
+				LEFT JOIN readLogs rl ON rl.rssItemUuid = ri.uuid AND rl.user = '$user'
 			WHERE
-				rf.category = '$category'
+				rc.uuid = '$category'
 			ORDER BY
 				date DESC
-			LIMIT 50
+			LIMIT " . $index . "," . $limit . "
 		";
 
+//		$logger->debug($sql);
+
 		$result = mysql_query($sql);
+		$resultCount = mysql_query("SELECT FOUND_ROWS()");
+		$resultCountRows = mysql_fetch_array($resultCount);
+		$itemArray[] = $resultCountRows[0];
 
 		while ($row = mysql_fetch_assoc($result)) {
 			$row['date'] = date('D, n/j, g:i a', $row['date']);
 			$row['wordCount'] = str_word_count($row['content']);
+			$row['alreadyRead'] = ($row['alreadyRead'] === NULL) ? false : true;
 			$itemArray[] = $row;
 		}
 

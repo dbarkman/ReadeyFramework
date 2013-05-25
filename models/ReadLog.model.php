@@ -17,12 +17,32 @@ class ReadLog
 	private $_user;
 	private $_words;
 	private $_speed;
+	private $_rssItemUuid;
 
 	public function __construct($logger, $db)
 	{
 		$this->_logger = $logger;
 
 		$this->_db = $db;
+	}
+
+	public static function GetFirstReadAlreadyReadStatus($user)
+	{
+		//don't change the ri.uuid below, it should be hardcoded for now - 642
+		$sql = "
+			SELECT
+				DISTINCT
+				rl.rssItemUuid AS alreadyRead
+			FROM
+				rssItems ri
+				LEFT JOIN readLogs rl ON rl.rssItemUuid = ri.uuid AND rl.user = '$user'
+			WHERE
+				ri.uuid = 'FDAE3FCD-7794-436C-ACFC-BA71317B6F9E'
+		";
+
+		$result = mysql_query($sql);
+		$row = mysql_fetch_assoc($result);
+		return ($row['alreadyRead'] === NULL) ? false : true;
 	}
 
 	public function createReadLog()
@@ -36,7 +56,8 @@ class ReadLog
 				modified = '$this->_modified',
 				user = '$this->_user',
 				words = '$this->_words',
-				speed = '$this->_speed'
+				speed = '$this->_speed',
+				rssItemUuid = '$this->_rssItemUuid'
 		";
 
 		mysql_query($sql);
@@ -89,6 +110,7 @@ class ReadLog
 		$this->_user = $row['user'];
 		$this->_words = $row['words'];
 		$this->_speed = $row['speed'];
+		$this->_rssItemUuid = $row['rssItemUuid'];
 	}
 
 	public function setUuid($uuid)
@@ -149,5 +171,15 @@ class ReadLog
 	public function getSpeed()
 	{
 		return $this->_speed;
+	}
+
+	public function setRssItemUuid($rssItemUuid)
+	{
+		$this->_rssItemUuid = $rssItemUuid;
+	}
+
+	public function getRssItemUuid()
+	{
+		return $this->_rssItemUuid;
 	}
 }
