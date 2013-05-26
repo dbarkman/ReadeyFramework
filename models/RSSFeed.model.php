@@ -119,7 +119,7 @@ class RSSFeed
 
 	public function setUuid($uuid)
 	{
-		$this->_uuid = $uuid;
+		$this->_uuid = mysql_real_escape_string($uuid);
 	}
 
 	public function getUuid()
@@ -129,7 +129,7 @@ class RSSFeed
 
 	public function setFeedUrl($feedUrl)
 	{
-		$this->_feedUrl = $feedUrl;
+		$this->_feedUrl = mysql_real_escape_string($feedUrl);
 	}
 
 	public function getFeedUrl()
@@ -149,7 +149,7 @@ class RSSFeed
 
 	public function setCategory($category)
 	{
-		$this->_category = $category;
+		$this->_category = mysql_real_escape_string($category);
 	}
 
 	public function getCategory()
@@ -159,7 +159,7 @@ class RSSFeed
 
 	public function setPermalink($permaLink)
 	{
-		$this->_permalink = $permaLink;
+		$this->_permalink = mysql_real_escape_string($permaLink);
 	}
 
 	public function getPermalink()
@@ -169,7 +169,7 @@ class RSSFeed
 
 	public function setCreated($created)
 	{
-		$this->_created = $created;
+		$this->_created = mysql_real_escape_string($created);
 	}
 
 	public function getCreated()
@@ -179,7 +179,7 @@ class RSSFeed
 
 	public function setModified($modified)
 	{
-		$this->_modified = $modified;
+		$this->_modified = mysql_real_escape_string($modified);
 	}
 
 	public function getModified()

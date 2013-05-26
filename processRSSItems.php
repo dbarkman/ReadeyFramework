@@ -53,7 +53,7 @@ class proccessRSSItems
 					$this->addItem($itemsArray[$i]);
 				}
 			}
-			$this->_logger->debug('Items Created for ' . $feed->get_title() . ': ' . $this->_createdCount);
+			$this->_logger->info('Items Created for ' . $feed->get_title() . ': ' . $this->_createdCount);
 		}
 	}
 

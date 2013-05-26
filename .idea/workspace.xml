@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69bfc728-9974-4183-8121-1ef493fe9c54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/RSSCategory.model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addCategory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getDateAndUuid.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Feedback.model.php" afterPath="$PROJECT_DIR$/models/Feedback.model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/RSSCategory.model.php" afterPath="$PROJECT_DIR$/models/RSSCategory.model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/RSSFeed.model.php" afterPath="$PROJECT_DIR$/models/RSSFeed.model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/RSSItem.model.php" afterPath="$PROJECT_DIR$/models/RSSItem.model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/ReadLog.model.php" afterPath="$PROJECT_DIR$/models/ReadLog.model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ReadeyFrameworkValidation.controller.php" afterPath="$PROJECT_DIR$/controllers/ReadeyFrameworkValidation.controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addRSS.php" afterPath="$PROJECT_DIR$/addRSS.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/SupportTicket.model.php" afterPath="$PROJECT_DIR$/models/SupportTicket.model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/User.model.php" afterPath="$PROJECT_DIR$/models/User.model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/processRSSItems.php" afterPath="$PROJECT_DIR$/processRSSItems.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/readey.properties" afterPath="$PROJECT_DIR$/config/readey.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -23,18 +23,18 @@
     <file path="/.htaccess" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369196283272" ignored="false" />
     <file path="/RSSItem.model.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369370030118" ignored="false" />
     <file path="/a.dummy" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369357754580" ignored="false" />
-    <file path="/processRSSItems.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365630787827" ignored="false" />
+    <file path="/processRSSItems.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369468839261" ignored="false" />
     <file path="$PROJECT_DIR$/../dbFramework/controllers/MobileAPIValidation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365112801068" ignored="false" />
     <file path="$PROJECT_DIR$/../dbFramework/controllers/APIValidation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365113293701" ignored="false" />
     <file path="$PROJECT_DIR$/../dbFramework/controllers/Validation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369199446822" ignored="false" />
     <file path="/APIValidation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365113882180" ignored="false" />
     <file path="$PROJECT_DIR$/../dbFramework/controllers/FrameworkValidation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369234603831" ignored="false" />
-    <file path="$PROJECT_DIR$/../dbFramework/controllers/Dropdowns.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365722698774" ignored="false" />
+    <file path="$PROJECT_DIR$/../dbFramework/controllers/Dropdowns.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369523729253" ignored="false" />
     <file path="/Validation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369199416543" ignored="false" />
     <file path="/ReadeyFrameworkValidation.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365115651285" ignored="false" />
     <file path="/Container.controller.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368041634377" ignored="false" />
     <file path="/ReadeyFrameworkValidation.controller.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369375467809" ignored="false" />
-    <file path="/readey.properties" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369459461930" ignored="false" />
+    <file path="/readey.properties" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369524086163" ignored="false" />
     <file path="$PROJECT_DIR$/../dbFramework/controllers/LogRequest.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365717358584" ignored="false" />
     <file path="/LogRequest.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1365717358055" ignored="false" />
     <file path="/Dropdowns.class.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1366210586866" ignored="false" />
@@ -86,7 +86,7 @@
     <file path="/RoomObj.test.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368229768808" ignored="false" />
     <file path="$PROJECT_DIR$/../../../StormSource/PHP/API-Precious/Classes/Framework/Core/MemcacheFactoryObj.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1368229684769" ignored="false" />
     <file path="$PROJECT_DIR$/../ReadeyAPI/.htaccess" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369416253533" ignored="false" />
-    <file path="/ReadLog.model.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369381731092" ignored="false" />
+    <file path="/ReadLog.model.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369604120673" ignored="false" />
     <file path="/addRSS.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369369289644" ignored="false" />
     <file path="/RSSCategory.model.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369383440636" ignored="false" />
     <file path="/addCategory.php" changelist="69bfc728-9974-4183-8121-1ef493fe9c54" time="1369368381517" ignored="false" />
@@ -110,25 +110,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="readey.properties" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="readey.properties" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/readey.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="21" selection-start="57" selection-end="57" vertical-scroll-proportion="0.020833334">
+            <state line="1" column="22" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReadLog.model.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/ReadLog.model.php">
+      <file leaf-file-name="processRSSItems.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/processRSSItems.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="78" selection-start="478" selection-end="478" vertical-scroll-proportion="-2.1666667">
+            <state line="55" column="32" selection-start="1425" selection-end="1425" vertical-scroll-proportion="-15.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Feedback.model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/Feedback.model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="152" column="58" selection-start="2627" selection-end="2627" vertical-scroll-proportion="-92.5">
               <folding>
-                <element signature="e#7#54#0" expanded="true" />
-                <marker date="1369419971000" expanded="true" signature="493:708" placeholder="SELECT DISTI..rssItems..." />
-                <marker date="1369419971000" expanded="true" signature="893:1144" placeholder="INSERT INTO ..." />
-                <marker date="1369419971000" expanded="true" signature="1349:1391" placeholder="SELECT SUM(w..readLogs..." />
-                <marker date="1369419971000" expanded="true" signature="1609:1682" placeholder="SELECT * FRO..readLogs..." />
+                <marker date="1369604301000" expanded="true" signature="422:719" placeholder="INSERT INTO ..." />
+                <marker date="1369604301000" expanded="true" signature="924:998" placeholder="SELECT * FRO..feedbacks..." />
               </folding>
             </state>
           </provider>
@@ -137,15 +143,29 @@
       <file leaf-file-name="RSSCategory.model.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/RSSCategory.model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="31" selection-start="872" selection-end="872" vertical-scroll-proportion="-11.25">
+            <state line="163" column="54" selection-start="2643" selection-end="2643" vertical-scroll-proportion="-36.5">
               <folding>
                 <element signature="e#7#58#0" expanded="true" />
-                <marker date="1369410451000" expanded="true" signature="406:444" placeholder="SELECT * FRO..rssCategories..." />
-                <marker date="1369410451000" expanded="true" signature="890:1046" placeholder="SELECT uuid,..rssCategories..." />
-                <marker date="1369410451000" expanded="true" signature="890:965" placeholder="SELECT uuid,..rssCategories..." />
-                <marker date="1369410451000" expanded="true" signature="890:965" placeholder="SELECT uuid,..rssCategories..." />
-                <marker date="1369410451000" expanded="true" signature="1313:1382" placeholder="SELECT uuid ..rssCategories..." />
-                <marker date="1369410451000" expanded="true" signature="1591:1775" placeholder="INSERT INTO ..." />
+                <marker date="1369604346000" expanded="true" signature="406:444" placeholder="SELECT * FRO..rssCategories..." />
+                <marker date="1369604346000" expanded="true" signature="890:1046" placeholder="SELECT uuid,..rssCategories..." />
+                <marker date="1369604346000" expanded="true" signature="890:965" placeholder="SELECT uuid,..rssCategories..." />
+                <marker date="1369604346000" expanded="true" signature="890:965" placeholder="SELECT uuid,..rssCategories..." />
+                <marker date="1369604346000" expanded="true" signature="1313:1382" placeholder="SELECT uuid ..rssCategories..." />
+                <marker date="1369604346000" expanded="true" signature="1591:1775" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RSSFeed.model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/RSSFeed.model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="181" column="62" selection-start="2829" selection-end="2829" vertical-scroll-proportion="-53.375">
+              <folding>
+                <marker date="1369604405000" expanded="true" signature="427:500" placeholder="SELECT uuid,..rssFeeds..." />
+                <marker date="1369604405000" expanded="true" signature="787:820" placeholder="SELECT * FRO..rssFeeds..." />
+                <marker date="1369604405000" expanded="true" signature="1055:1125" placeholder="SELECT DISTI..rssFeeds..." />
+                <marker date="1369604405000" expanded="true" signature="1348:1607" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -154,13 +174,39 @@
       <file leaf-file-name="RSSItem.model.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/RSSItem.model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="0" selection-start="1954" selection-end="2026" vertical-scroll-proportion="-62.5">
+            <state line="8" column="13" selection-start="69" selection-end="69" vertical-scroll-proportion="-5.0">
               <folding>
-                <marker date="1369377941000" expanded="true" signature="500:573" placeholder="SELECT * FRO..rssItems..." />
-                <marker date="1369377941000" expanded="true" signature="2146:2247" placeholder="SELECT date ..rssItems..." />
-                <marker date="1369377941000" expanded="true" signature="2783:3139" placeholder="INSERT INTO ..." />
-                <marker date="1369377941000" expanded="true" signature="4982:5085" placeholder="SELECT uuid,..rssItems..." />
-                <marker date="1369377941000" expanded="true" signature="5462:5604" placeholder="UPDATE rssIt..." />
+                <element signature="e#7#54#0" expanded="true" />
+                <marker date="1369604504000" expanded="true" signature="500:573" placeholder="SELECT * FRO..rssItems..." />
+                <marker date="1369604504000" expanded="true" signature="2146:2247" placeholder="SELECT date ..rssItems..." />
+                <marker date="1369604504000" expanded="true" signature="2783:3139" placeholder="INSERT INTO ..." />
+                <marker date="1369604504000" expanded="true" signature="5164:5267" placeholder="SELECT uuid,..rssItems..." />
+                <marker date="1369604504000" expanded="true" signature="5644:5786" placeholder="UPDATE rssIt..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SupportTicket.model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/SupportTicket.model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="147" column="0" selection-start="2405" selection-end="2405" vertical-scroll-proportion="-27.75">
+              <folding>
+                <marker date="1369604561000" expanded="true" signature="411:668" placeholder="INSERT INTO ..." />
+                <marker date="1369604561000" expanded="true" signature="878:957" placeholder="SELECT * FRO..supportTickets..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.model.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/User.model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="153" column="0" selection-start="2341" selection-end="2341" vertical-scroll-proportion="1.6686479">
+              <folding>
+                <marker date="1369604626000" expanded="true" signature="363:576" placeholder="INSERT INTO ..." />
+                <marker date="1369604626000" expanded="true" signature="777:817" placeholder="SELECT COUNT..users..." />
+                <marker date="1369604626000" expanded="true" signature="1032:1102" placeholder="SELECT * FRO..users..." />
               </folding>
             </state>
           </provider>
@@ -184,22 +230,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/models/Feedback.model.php" />
-        <option value="$PROJECT_DIR$/models/SupportTicket.model.php" />
-        <option value="$PROJECT_DIR$/models/User.model.php" />
         <option value="$PROJECT_DIR$/controllers/ReadeyFrameworkValidation.class.php" />
         <option value="$PROJECT_DIR$/controllers/Container.controller.php" />
-        <option value="$PROJECT_DIR$/processRSSItems.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/addCategory.php" />
         <option value="$PROJECT_DIR$/addRSS.php" />
         <option value="$PROJECT_DIR$/getDateAndUuid.php" />
-        <option value="$PROJECT_DIR$/models/RSSFeed.model.php" />
         <option value="$PROJECT_DIR$/controllers/ReadeyFrameworkValidation.controller.php" />
-        <option value="$PROJECT_DIR$/models/RSSItem.model.php" />
-        <option value="$PROJECT_DIR$/models/RSSCategory.model.php" />
-        <option value="$PROJECT_DIR$/models/ReadLog.model.php" />
+        <option value="$PROJECT_DIR$/processRSSItems.php" />
         <option value="$PROJECT_DIR$/config/readey.properties" />
+        <option value="$PROJECT_DIR$/models/ReadLog.model.php" />
+        <option value="$PROJECT_DIR$/models/Feedback.model.php" />
+        <option value="$PROJECT_DIR$/models/RSSCategory.model.php" />
+        <option value="$PROJECT_DIR$/models/RSSFeed.model.php" />
+        <option value="$PROJECT_DIR$/models/RSSItem.model.php" />
+        <option value="$PROJECT_DIR$/models/SupportTicket.model.php" />
+        <option value="$PROJECT_DIR$/models/User.model.php" />
       </list>
     </option>
   </component>
@@ -725,32 +771,10 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/processApigeeReadLogs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="899" selection-end="1257" vertical-scroll-proportion="-21.25" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/credentials.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="15" selection-start="210" selection-end="224" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/processApigeeFeedbacks.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="0" selection-start="966" selection-end="1348" vertical-scroll-proportion="-20.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Feedback.model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="34" selection-start="388" selection-end="402" vertical-scroll-proportion="0.5572065">
-          <folding>
-            <marker date="1363929983000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1363929983000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..feedbacks..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -789,25 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/RSSFeed.model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="26" selection-start="500" selection-end="500" vertical-scroll-proportion="-16.875">
-          <folding>
-            <marker date="1369373511000" expanded="true" signature="-1:-1" placeholder="SELECT uuid,..rssFeeds..." />
-            <marker date="1369373511000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rssFeeds..." />
-            <marker date="1369373511000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..rssFeeds..." />
-            <marker date="1369373511000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processRSSItems.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="35" selection-start="755" selection-end="755" vertical-scroll-proportion="2.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/ReadeyFrameworkValidation.controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="132" column="57" selection-start="5477" selection-end="5477" vertical-scroll-proportion="-11.208333">
@@ -815,51 +820,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/processRSSItems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="32" selection-start="1425" selection-end="1425" vertical-scroll-proportion="-15.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/readey.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="22" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ReadLog.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="177" column="68" selection-start="3052" selection-end="3052" vertical-scroll-proportion="-20.25">
+          <folding>
+            <element signature="e#7#54#0" expanded="true" />
+            <marker date="1369604208000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..rssItems..." />
+            <marker date="1369604208000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1369604208000" expanded="true" signature="-1:-1" placeholder="SELECT SUM(w..readLogs..." />
+            <marker date="1369604208000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..readLogs..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Feedback.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="58" selection-start="2627" selection-end="2627" vertical-scroll-proportion="-92.5">
+          <folding>
+            <marker date="1369604301000" expanded="true" signature="422:719" placeholder="INSERT INTO ..." />
+            <marker date="1369604301000" expanded="true" signature="924:998" placeholder="SELECT * FRO..feedbacks..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/RSSCategory.model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="31" selection-start="872" selection-end="872" vertical-scroll-proportion="-11.25">
+        <state line="163" column="54" selection-start="2643" selection-end="2643" vertical-scroll-proportion="-36.5">
           <folding>
             <element signature="e#7#58#0" expanded="true" />
-            <marker date="1369410451000" expanded="true" signature="406:444" placeholder="SELECT * FRO..rssCategories..." />
-            <marker date="1369410451000" expanded="true" signature="890:1046" placeholder="SELECT uuid,..rssCategories..." />
-            <marker date="1369410451000" expanded="true" signature="890:965" placeholder="SELECT uuid,..rssCategories..." />
-            <marker date="1369410451000" expanded="true" signature="890:965" placeholder="SELECT uuid,..rssCategories..." />
-            <marker date="1369410451000" expanded="true" signature="1313:1382" placeholder="SELECT uuid ..rssCategories..." />
-            <marker date="1369410451000" expanded="true" signature="1591:1775" placeholder="INSERT INTO ..." />
+            <marker date="1369604346000" expanded="true" signature="406:444" placeholder="SELECT * FRO..rssCategories..." />
+            <marker date="1369604346000" expanded="true" signature="890:1046" placeholder="SELECT uuid,..rssCategories..." />
+            <marker date="1369604346000" expanded="true" signature="890:965" placeholder="SELECT uuid,..rssCategories..." />
+            <marker date="1369604346000" expanded="true" signature="890:965" placeholder="SELECT uuid,..rssCategories..." />
+            <marker date="1369604346000" expanded="true" signature="1313:1382" placeholder="SELECT uuid ..rssCategories..." />
+            <marker date="1369604346000" expanded="true" signature="1591:1775" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/RSSFeed.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="181" column="62" selection-start="2829" selection-end="2829" vertical-scroll-proportion="-53.375">
+          <folding>
+            <marker date="1369604405000" expanded="true" signature="427:500" placeholder="SELECT uuid,..rssFeeds..." />
+            <marker date="1369604405000" expanded="true" signature="787:820" placeholder="SELECT * FRO..rssFeeds..." />
+            <marker date="1369604405000" expanded="true" signature="1055:1125" placeholder="SELECT DISTI..rssFeeds..." />
+            <marker date="1369604405000" expanded="true" signature="1348:1607" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/RSSItem.model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="0" selection-start="1954" selection-end="2026" vertical-scroll-proportion="-62.5">
-          <folding>
-            <marker date="1369377941000" expanded="true" signature="500:573" placeholder="SELECT * FRO..rssItems..." />
-            <marker date="1369377941000" expanded="true" signature="2146:2247" placeholder="SELECT date ..rssItems..." />
-            <marker date="1369377941000" expanded="true" signature="2783:3139" placeholder="INSERT INTO ..." />
-            <marker date="1369377941000" expanded="true" signature="4982:5085" placeholder="SELECT uuid,..rssItems..." />
-            <marker date="1369377941000" expanded="true" signature="5462:5604" placeholder="UPDATE rssIt..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ReadLog.model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="78" selection-start="478" selection-end="478" vertical-scroll-proportion="-2.1666667">
+        <state line="8" column="13" selection-start="69" selection-end="69" vertical-scroll-proportion="-5.0">
           <folding>
             <element signature="e#7#54#0" expanded="true" />
-            <marker date="1369419971000" expanded="true" signature="493:708" placeholder="SELECT DISTI..rssItems..." />
-            <marker date="1369419971000" expanded="true" signature="893:1144" placeholder="INSERT INTO ..." />
-            <marker date="1369419971000" expanded="true" signature="1349:1391" placeholder="SELECT SUM(w..readLogs..." />
-            <marker date="1369419971000" expanded="true" signature="1609:1682" placeholder="SELECT * FRO..readLogs..." />
+            <marker date="1369604504000" expanded="true" signature="500:573" placeholder="SELECT * FRO..rssItems..." />
+            <marker date="1369604504000" expanded="true" signature="2146:2247" placeholder="SELECT date ..rssItems..." />
+            <marker date="1369604504000" expanded="true" signature="2783:3139" placeholder="INSERT INTO ..." />
+            <marker date="1369604504000" expanded="true" signature="5164:5267" placeholder="SELECT uuid,..rssItems..." />
+            <marker date="1369604504000" expanded="true" signature="5644:5786" placeholder="UPDATE rssIt..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/readey.properties">
+    <entry file="file://$PROJECT_DIR$/models/SupportTicket.model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="57" selection-end="57" vertical-scroll-proportion="0.020833334">
-          <folding />
+        <state line="147" column="0" selection-start="2405" selection-end="2405" vertical-scroll-proportion="-27.75">
+          <folding>
+            <marker date="1369604561000" expanded="true" signature="411:668" placeholder="INSERT INTO ..." />
+            <marker date="1369604561000" expanded="true" signature="878:957" placeholder="SELECT * FRO..supportTickets..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/User.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="0" selection-start="2341" selection-end="2341" vertical-scroll-proportion="1.6686479">
+          <folding>
+            <marker date="1369604626000" expanded="true" signature="363:576" placeholder="INSERT INTO ..." />
+            <marker date="1369604626000" expanded="true" signature="777:817" placeholder="SELECT COUNT..users..." />
+            <marker date="1369604626000" expanded="true" signature="1032:1102" placeholder="SELECT * FRO..users..." />
+          </folding>
         </state>
       </provider>
     </entry>

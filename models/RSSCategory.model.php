@@ -121,7 +121,7 @@ class RSSCategory
 
 	public function setUuid($uuid)
 	{
-		$this->_uuid = $uuid;
+		$this->_uuid = mysql_real_escape_string($uuid);
 	}
 
 	public function getUuid()
@@ -131,7 +131,7 @@ class RSSCategory
 
 	public function setName($category)
 	{
-		$this->_name = $category;
+		$this->_name = mysql_real_escape_string($category);
 	}
 
 	public function getName()
@@ -141,7 +141,7 @@ class RSSCategory
 
 	public function setCreated($created)
 	{
-		$this->_created = $created;
+		$this->_created = mysql_real_escape_string($created);
 	}
 
 	public function getCreated()
@@ -151,7 +151,7 @@ class RSSCategory
 
 	public function setModified($modified)
 	{
-		$this->_modified = $modified;
+		$this->_modified = mysql_real_escape_string($modified);
 	}
 
 	public function getModified()
@@ -161,7 +161,7 @@ class RSSCategory
 
 	public function setRank($rank)
 	{
-		$this->_rank = $rank;
+		$this->_rank = mysql_real_escape_string($rank);
 	}
 
 	public function getRank()

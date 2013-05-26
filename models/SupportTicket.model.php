@@ -77,7 +77,7 @@ class SupportTicket {
 
 	public function setUuid($uuid)
 	{
-		$this->_uuid = $uuid;
+		$this->_uuid = mysql_real_escape_string($uuid);
 	}
 
 	public function getUuid()
@@ -87,7 +87,7 @@ class SupportTicket {
 
 	public function setCreated($created)
 	{
-		$this->_created = $created;
+		$this->_created = mysql_real_escape_string($created);
 	}
 
 	public function getCreated()
@@ -97,7 +97,7 @@ class SupportTicket {
 
 	public function setModified($modified)
 	{
-		$this->_modified = $modified;
+		$this->_modified = mysql_real_escape_string($modified);
 	}
 
 	public function getModified()
@@ -117,7 +117,7 @@ class SupportTicket {
 
 	public function setEmail($email)
 	{
-		$this->_email = $email;
+		$this->_email = mysql_real_escape_string($email);
 	}
 
 	public function getEmail()

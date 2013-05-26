@@ -115,7 +115,7 @@ class ReadLog
 
 	public function setUuid($uuid)
 	{
-		$this->_uuid = $uuid;
+		$this->_uuid = mysql_real_escape_string($uuid);
 	}
 
 	public function getUuid()
@@ -125,7 +125,7 @@ class ReadLog
 
 	public function setCreated($created)
 	{
-		$this->_created = $created;
+		$this->_created = mysql_real_escape_string($created);
 	}
 
 	public function getCreated()
@@ -135,7 +135,7 @@ class ReadLog
 
 	public function setModified($modified)
 	{
-		$this->_modified = $modified;
+		$this->_modified = mysql_real_escape_string($modified);
 	}
 
 	public function getModified()
@@ -145,7 +145,7 @@ class ReadLog
 
 	public function setUser($user)
 	{
-		$this->_user = $user;
+		$this->_user = mysql_real_escape_string($user);
 	}
 
 	public function getUser()
@@ -155,7 +155,7 @@ class ReadLog
 
 	public function setWords($words)
 	{
-		$this->_words = $words;
+		$this->_words = mysql_real_escape_string($words);
 	}
 
 	public function getWords()
@@ -165,7 +165,7 @@ class ReadLog
 
 	public function setSpeed($speed)
 	{
-		$this->_speed = $speed;
+		$this->_speed = mysql_real_escape_string($speed);
 	}
 
 	public function getSpeed()
@@ -175,7 +175,7 @@ class ReadLog
 
 	public function setRssItemUuid($rssItemUuid)
 	{
-		$this->_rssItemUuid = $rssItemUuid;
+		$this->_rssItemUuid = mysql_real_escape_string($rssItemUuid);
 	}
 
 	public function getRssItemUuid()

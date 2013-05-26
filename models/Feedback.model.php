@@ -80,7 +80,7 @@ class Feedback {
 
 	public function setUuid($uuid)
 	{
-		$this->_uuid = $uuid;
+		$this->_uuid = mysql_real_escape_string($uuid);
 	}
 
 	public function getUuid()
@@ -90,7 +90,7 @@ class Feedback {
 
 	public function setCreated($created)
 	{
-		$this->_created = $created;
+		$this->_created = mysql_real_escape_string($created);
 	}
 
 	public function getCreated()
@@ -100,7 +100,7 @@ class Feedback {
 
 	public function setModified($modified)
 	{
-		$this->_modified = $modified;
+		$this->_modified = mysql_real_escape_string($modified);
 	}
 
 	public function getModified()
@@ -110,7 +110,7 @@ class Feedback {
 
 	public function setUser($user)
 	{
-		$this->_user = $user;
+		$this->_user = mysql_real_escape_string($user);
 	}
 
 	public function getUser()
@@ -120,7 +120,7 @@ class Feedback {
 
 	public function setEmail($email)
 	{
-		$this->_email = $email;
+		$this->_email = mysql_real_escape_string($email);
 	}
 
 	public function getEmail()
@@ -140,7 +140,7 @@ class Feedback {
 
 	public function setFeedbackType($feedbackType)
 	{
-		$this->_feedbackType = $feedbackType;
+		$this->_feedbackType = mysql_real_escape_string($feedbackType);
 	}
 
 	public function getFeedbackType()
@@ -150,7 +150,7 @@ class Feedback {
 
 	public function setStatus($status)
 	{
-		$this->_status = $status;
+		$this->_status = mysql_real_escape_string($status);
 	}
 
 	public function getStatus()

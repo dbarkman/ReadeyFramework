@@ -93,7 +93,7 @@ class User {
 
 	public function setUuid($uuid)
 	{
-		$this->_uuid = $uuid;
+		$this->_uuid = mysql_real_escape_string($uuid);
 	}
 
 	public function getUuid()
@@ -103,7 +103,7 @@ class User {
 
 	public function setCreated($created)
 	{
-		$this->_created = $created;
+		$this->_created = mysql_real_escape_string($created);
 	}
 
 	public function getCreated()
@@ -113,7 +113,7 @@ class User {
 
 	public function setModified($modified)
 	{
-		$this->_modified = $modified;
+		$this->_modified = mysql_real_escape_string($modified);
 	}
 
 	public function getModified()
@@ -133,7 +133,7 @@ class User {
 
 	public function setEmail($email)
 	{
-		$this->_email = $email;
+		$this->_email = mysql_real_escape_string($email);
 	}
 
 	public function getEmail()
@@ -143,7 +143,7 @@ class User {
 
 	public function setUsername($username)
 	{
-		$this->_username = $username;
+		$this->_username = mysql_real_escape_string($username);
 	}
 
 	public function getUsername()

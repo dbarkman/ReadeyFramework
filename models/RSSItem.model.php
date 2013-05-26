@@ -165,7 +165,7 @@ class RSSItem
 
 	public function setUuid($uuid)
 	{
-		$this->_uuid = $uuid;
+		$this->_uuid = mysql_real_escape_string($uuid);
 	}
 
 	public function getUuid()
@@ -175,7 +175,7 @@ class RSSItem
 
 	public function setFeed($feed)
 	{
-		$this->_feed = $feed;
+		$this->_feed = mysql_real_escape_string($feed);
 	}
 
 	public function getFeed()
@@ -185,7 +185,7 @@ class RSSItem
 
 	public function setMd5String($md5String)
 	{
-		$this->_md5String = $md5String;
+		$this->_md5String = mysql_real_escape_string($md5String);
 	}
 
 	public function getMd5String()
@@ -205,7 +205,7 @@ class RSSItem
 
 	public function setDate($date)
 	{
-		$this->_date = $date;
+		$this->_date = mysql_real_escape_string($date);
 	}
 
 	public function getDate()
@@ -215,7 +215,7 @@ class RSSItem
 
 	public function setPermalink($permaLink)
 	{
-		$this->_permalink = $permaLink;
+		$this->_permalink = mysql_real_escape_string($permaLink);
 	}
 
 	public function getPermalink()
@@ -245,7 +245,7 @@ class RSSItem
 
 	public function setCreated($created)
 	{
-		$this->_created = $created;
+		$this->_created = mysql_real_escape_string($created);
 	}
 
 	public function getCreated()
@@ -255,7 +255,7 @@ class RSSItem
 
 	public function setModified($modified)
 	{
-		$this->_modified = $modified;
+		$this->_modified = mysql_real_escape_string($modified);
 	}
 
 	public function getModified()
