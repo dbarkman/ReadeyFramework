@@ -62,8 +62,52 @@ class RSSCategory
 				rssCategories
 			WHERE
 				active = 1
+				AND
+				topLevel = 'featured'
 		";
 		$sql .= $showFirstReadCategorySql;
+		$sql .= "
+			ORDER BY rank ASC, name
+		";
+
+		$result = mysql_query($sql);
+
+		while ($row = mysql_fetch_assoc($result)) {
+			$categoryArray[] = array('name' => $row['name'], 'uuid' => $row['uuid']);
+		}
+
+		return $categoryArray;
+	}
+
+	public static function GetSelectCategoriesForAPI($user, $topLevel)
+	{
+		$showFirstReadCategorySql = '';
+		$firstReadAlreadyRead = ReadLog::GetFirstReadAlreadyReadStatus($user);
+		if ($firstReadAlreadyRead === true) {
+			$showFirstReadCategorySql = "AND rank != '0'";
+		}
+
+		$showLatestReadeyServiceUpdateSql = '';
+		$latestReadeyServiceUpdateAlreadyRead = ReadLog::GetLatestReadeyServiceUpdateAlreadyReadStatus($user);
+		if ($latestReadeyServiceUpdateAlreadyRead === true) {
+			$showLatestReadeyServiceUpdateSql = "AND rank != '1'";
+		}
+
+		$categoryArray = array();
+
+		$sql = "
+			SELECT
+				uuid,
+				name
+			FROM
+				rssCategories
+			WHERE
+				active = 1
+				AND
+				topLevel = '$topLevel'
+		";
+		$sql .= $showFirstReadCategorySql;
+		$sql .= $showLatestReadeyServiceUpdateSql;
 		$sql .= "
 			ORDER BY rank ASC, name
 		";

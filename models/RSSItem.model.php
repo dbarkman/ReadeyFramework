@@ -54,15 +54,17 @@ class RSSItem
 
 	public static function GetItemsForCategoryForAPI($category, $page, $itemsPerPage, $user)
 	{
-//		$properties = new ReadeyProperties();
-//		$logFile = $properties->getLogFile();
-//		$logLevel = $properties->getLogLevel();
-//		$logger = new Logger($logLevel, $logFile);
+		$properties = new ReadeyProperties();
+		$logFile = $properties->getLogFile();
+		$logLevel = $properties->getLogLevel();
+		$logger = new Logger($logLevel, $logFile);
 
 		$limit = intval($itemsPerPage);
 		$index = ($page > 0) ? (($page - 1) * $itemsPerPage) : 0;
 
 		$itemArray = array();
+
+		$startTime = microtime(true);
 
 		$sql = "
 			SELECT
@@ -80,19 +82,22 @@ class RSSItem
 				JOIN rssFeeds rf ON rf.uuid = ri.feed
 				JOIN rssCategories rc ON rc.uuid = rf.category
 				LEFT JOIN readLogs rl ON rl.rssItemUuid = ri.uuid AND rl.user = '$user'
+				JOIN category_feed cf ON cf.feed = ri.feed
 			WHERE
-				rc.uuid = '$category'
+				cf.category = '$category'
 			ORDER BY
 				date DESC
 			LIMIT " . $index . "," . $limit . "
 		";
 
-//		$logger->debug($sql);
-
 		$result = mysql_query($sql);
+		$queryTime = (microtime(true) - $startTime);
 		$resultCount = mysql_query("SELECT FOUND_ROWS()");
 		$resultCountRows = mysql_fetch_array($resultCount);
 		$itemArray[] = $resultCountRows[0];
+		$itemArray[] = $queryTime;
+
+		$logger->info('Query Exec Time: ' . $queryTime);
 
 		while ($row = mysql_fetch_assoc($result)) {
 			$row['date'] = date('D, n/j, g:i a', $row['date']);

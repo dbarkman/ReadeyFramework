@@ -52,9 +52,11 @@ class ReadeyFrameworkValidation
 		$_REQUEST['words'] = $this->_validate->sanitizeInteger($_REQUEST['words']);
 		$_REQUEST['speed'] = $this->_validate->sanitizeFloat($_REQUEST['speed']);
 		$_REQUEST['rssItemUuid'] = $this->_validate->sanitizeUUID($_REQUEST['rssItemUuid']);
+		$_REQUEST['rssCategory'] = $this->_validate->sanitizeUUID($_REQUEST['rssCategory']);
 		$this->validateWords(TRUE);
 		$this->validateSpeed(TRUE);
 		$this->validateRssItemUuid(TRUE);
+		$this->validateRssCategoryUuid(TRUE);
 	}
 
 	public function validateFeedback()
@@ -174,6 +176,16 @@ class ReadeyFrameworkValidation
 			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'rssItemUuid', $returnError);
 		} else if ($required === TRUE) {
 			$this->reportVariableErrors('missing', 'rssItemUuid', '');
+		}
+	}
+
+	private function validateRssCategoryUuid($required) {
+		if (isset($_REQUEST['rssCategory']) && !empty($_REQUEST['rssCategory'])) {
+			$this->_logger->debug('Checking rssCategory: ' . $_REQUEST['rssCategory']);
+			$returnError = $this->_validate->validateUUID($_REQUEST['rssCategory']);
+			if (!empty($returnError)) $this->reportVariableErrors('invalid', 'rssCategory', $returnError);
+		} else if ($required === TRUE) {
+			$this->reportVariableErrors('missing', 'rssCategory', '');
 		}
 	}
 

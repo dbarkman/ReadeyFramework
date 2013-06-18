@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>readey</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>-4261997297051570041</string>
+			<key>name</key>
+			<string>Web1</string>
+			<key>port</key>
+			<integer>3306</integer>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>ssh_host</key>
+			<string>192.155.82.188</string>
+			<key>ssh_keyLocation</key>
+			<string>~/.ssh/id_rsa</string>
+			<key>ssh_keyLocationEnabled</key>
+			<integer>1</integer>
+			<key>ssh_port</key>
+			<integer>22</integer>
+			<key>ssh_user</key>
+			<string>dbarkman</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPSSHTunnelConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
+			CwwNEVYkY2xhc3NXTlMua2V5c1pOUy5vYmplY3RzgAyjDg8QgAKA
+			A4AEoxITFIAFgAaACFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
+			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHIAH
+			oKDSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
+			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00gkL
+			JSaAC6EngAnSCSkqK1lOUy5zdHJpbmeAClVlbnRyedIeHy0uXxAP
+			TlNNdXRhYmxlU3RyaW5noy0vI1hOU1N0cmluZ9IeHzEyXk5TTXV0
+			YWJsZUFycmF5ozEzI1dOU0FycmF50h4fIjWiIiNfEA9OU0tleWVk
+			QXJjaGl2ZXLRODlUZGF0YYABAAgAEQAaACMALQAyADcARQBLAFIA
+			WQBhAGwAbgByAHQAdgB4AHwAfgCAAIIAhwCMAJEAugDBAMMAxADF
+			AMoA1QDeAPQA+AEFAQ4BEwEVARcBGQEeASgBKgEwATUBRwFLAVQB
+			WQFoAWwBdAF5AXwBjgGRAZYAAAAAAAACAQAAAAAAAAA6AAAAAAAA
+			AAAAAAAAAAABmA==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1167, 694}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>SELECT count(DISTINCT ar.uuid) users
+FROM APIRequests ar;
+
+SELECT rf.title, count(ri.feed) AS count
+FROM rssItems ri
+JOIN rssFeeds rf ON rf.uuid = ri.feed
+GROUP BY ri.feed
+ORDER BY count DESC;
+
+SELECT rc.name, count(ri.feed) AS count
+FROM rssItems ri
+JOIN rssFeeds rf ON rf.uuid = ri.feed
+JOIN rssCategories rc ON rc.uuid = rf.category
+GROUP BY rc.name
+ORDER BY count DESC;
+
+SELECT rc.name, count(rf.entry) AS count
+FROM rssCategories rc
+LEFT JOIN rssFeeds rf ON rf.category = rc.uuid
+GROUP BY rc.name
+HAVING count &lt; '3'
+ORDER BY count DESC;
+
+SELECT rf.title, MAX(from_unixtime(ri.date)) AS latest
+FROM rssItems ri
+JOIN rssFeeds rf ON rf.uuid = ri.feed
+GROUP BY ri.feed
+ORDER BY latest;
+
+SELECT rc.name, MAX(from_unixtime(ri.date)) AS latest
+FROM rssItems ri
+JOIN rssFeeds rf ON rf.uuid = ri.feed
+JOIN rssCategories rc ON rc.uuid = rf.category
+GROUP BY rc.name
+ORDER BY latest;
+
+SELECT rf.title
+FROM rssFeeds rf
+JOIN rssCategories rc ON rc.uuid = rf.category
+WHERE rc.name = 'News';
+</string>
+			<key>table</key>
+			<string>readLogs</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>272</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>SELECT * FROM category_feed WHERE category = 'F66B30EF-1425-40ED-ADB2-CCFF2E973624'</string>
+		<string>SELECT rf.title, count(ri.uuid) AS count
+FROM rssFeeds rf
+LEFT JOIN rssItems ri ON ri.feed = rf.uuid
+GROUP BY rf.title
+ORDER BY count ASC</string>
+		<string>SELECT rf.title, count(ri.uuid) AS count
+FROM rssFeeds rf
+LEFT JOIN rssItems ri ON ri.feed = rf.uuid
+GROUP BY rf.title
+ORDER BY count DESC</string>
+		<string>SELECT rf.title, count(ri.uuid) AS count
+FROM rssFeeds rf
+LEFT JOIN rssItems ri ON ri.feed = rf.uuid
+GROUP BY rf.title
+ORDER BY rf.title</string>
+		<string>SELECT DISTINCT rf.title
+FROM rssFeeds rf
+LEFT JOIN rssItems ri ON ri.feed = rf.uuid
+ORDER BY rf.title</string>
+		<string>SELECT distinct rf.title
+FROM rssFeeds rf
+JOIN rssItems ri ON ri.feed = rf.uuid
+ORDER BY rf.title</string>
+		<string>SELECT distinct rf.title
+FROM rssFeeds rf
+LEFT JOIN rssItems ri ON ri.feed = rf.uuid
+ORDER BY rf.title</string>
+		<string>SELECT rf.title
+FROM rssFeeds rf
+LEFT JOIN rssItems ri ON ri.feed = rf.uuid
+ORDER BY rf.title</string>
+		<string>SELECT rf.title
+FROM rssFeeds rf
+LEFT JOIN rssItems ri ON r.feed = rf.uuid
+ORDER BY rf.title</string>
+		<string>SELECT rf.title
+FROM rssFeeds rf
+ORDER BY rf.title</string>
+		<string>SELECT rf.title
+FROM rssFeeds rf</string>
+		<string>SELECT rf.title, count(ri.feed) AS count
+FROM rssFeeds rf
+JOIN rssItems ri ON ri.feed = rf.uuid
+GROUP BY rf.title
+ORDER BY rf.title</string>
+		<string>SELECT rf.title, count(ri.feed) AS count
+FROM rssFeeds rf
+JOIN rssItems ri ON ri.feed = rf.uuid
+GROUP BY rf.title
+ORDER BY count DESC</string>
+		<string>SELECT rf.title
+FROM rssFeeds rf
+JOIN rssCategories rc ON rc.uuid = rf.category
+WHERE rc.name = 'Music'</string>
+		<string>SELECT rf.title, count(ri.feed) AS count
+FROM rssItems ri
+LEFT JOIN rssFeeds rf ON rf.uuid = ri.feed
+GROUP BY ri.feed
+ORDER BY count DESC</string>
+		<string>SELECT rf.title, count(ri.feed) AS count
+FROM rssItems ri
+JOIN rssFeeds rf ON rf.uuid = ri.feed
+GROUP BY ri.feed
+ORDER BY count DESC</string>
+		<string>SELECT * FROM rssItems WHERE feed = 'BE220E1F-1B5C-4C8F-984E-564DC4D9D67D'</string>
+		<string>SELECT * FROM rssItems WHERE feed = '8098E2DE-3492-4A7A-86EB-F7CA07080CE0'</string>
+		<string>SELECT rf.title
+FROM rssFeeds rf
+JOIN rssCategories rc ON rc.uuid = rf.category
+WHERE rc.name = 'News'</string>
+		<string>UPDATE rssCategories SET active = 1 WHERE entry &gt; '30'</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.5.30-log</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

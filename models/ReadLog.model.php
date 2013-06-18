@@ -18,6 +18,7 @@ class ReadLog
 	private $_words;
 	private $_speed;
 	private $_rssItemUuid;
+	private $_rssCategoryUuid;
 
 	public function __construct($logger, $db)
 	{
@@ -45,6 +46,25 @@ class ReadLog
 		return ($row['alreadyRead'] === NULL) ? false : true;
 	}
 
+	public static function GetLatestReadeyServiceUpdateAlreadyReadStatus($user)
+	{
+		//don't change the ri.uuid below, it should be hardcoded for now - 642
+		$sql = "
+			SELECT
+				DISTINCT
+				rl.rssItemUuid AS alreadyRead
+			FROM
+				rssItems ri
+				LEFT JOIN readLogs rl ON rl.rssItemUuid = ri.uuid AND rl.user = '$user'
+			WHERE
+				ri.uuid = '3BBF63FA-3F2E-4E9A-9037-5A98C83551E6'
+		";
+
+		$result = mysql_query($sql);
+		$row = mysql_fetch_assoc($result);
+		return ($row['alreadyRead'] === NULL) ? false : true;
+	}
+
 	public function createReadLog()
 	{
 		$sql = "
@@ -57,7 +77,8 @@ class ReadLog
 				user = '$this->_user',
 				words = '$this->_words',
 				speed = '$this->_speed',
-				rssItemUuid = '$this->_rssItemUuid'
+				rssItemUuid = '$this->_rssItemUuid',
+				rssCategoryUuid = '$this->_rssCategoryUuid'
 		";
 
 		mysql_query($sql);
@@ -181,5 +202,15 @@ class ReadLog
 	public function getRssItemUuid()
 	{
 		return $this->_rssItemUuid;
+	}
+
+	public function setRssCategoryUuid($rssCategoryUuid)
+	{
+		$this->_rssCategoryUuid = mysql_real_escape_string($rssCategoryUuid);
+	}
+
+	public function getRssCategoryUuid()
+	{
+		return $this->_rssCategoryUuid;
 	}
 }
